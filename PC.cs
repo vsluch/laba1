@@ -8,7 +8,7 @@ namespace laba1
 {
     public class PC : ComputerEquipment
     {
-        private string CaseColor {  get; set; }
+        private string CaseColor {  get; set; }     // цвет корпуса
 
         public PC(string brand = "Неизвестный", string cpu_brand = "Неизвестный", 
                   int ram = 0, int price = 0, string _CaseColor = "Чёрный") 
