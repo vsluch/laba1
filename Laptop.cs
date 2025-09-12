@@ -8,13 +8,27 @@ namespace laba1
 {
     public class Laptop : ComputerEquipment
     {
-        private bool HasBacklight { get; set; }
+        private bool HasBacklight { get; set; }         // наличие подсветки клавиатуры
+
 
         public Laptop(string brand = "Неизвестный", string cpu_brand = "Неизвестный",
-                      int ram = 0, int price = 0, bool hasBacklight = false)
+                      int ram = 0, int price = 0, int hasBacklight = 0)
                       : base(brand, cpu_brand, ram, price)
         {
-            HasBacklight = hasBacklight;
+            if(hasBacklight == 1)
+            {
+                HasBacklight = true;
+            }
+            else if(hasBacklight == 0)
+            {
+                HasBacklight = false;
+            }
+            else
+            {
+                Console.WriteLine("Некорректный ввод. Установлено значение по умолчанию (НЕТ)");
+                HasBacklight = false;
+            }
+
         }
 
 
@@ -28,3 +42,4 @@ namespace laba1
         }
     }  
 }
+
