@@ -65,8 +65,10 @@ namespace laba1
                         int ram = int.Parse(Console.ReadLine());
                         Console.Write("Введите цену (Руб.): ");
                         int price = int.Parse(Console.ReadLine());
+                        Console.Write("Введите цвет корпуса: ");
+                        string caseColor = Console.ReadLine();
 
-                        newDevice = new PC(brand, cpuBrand, ram, price);
+                        newDevice = new PC(brand, cpuBrand, ram, price, caseColor);
                     }
                     else if (type == 3)
                     {
@@ -78,8 +80,11 @@ namespace laba1
                         int ram = int.Parse(Console.ReadLine());
                         Console.Write("Введите цену (Руб.): ");
                         int price = int.Parse(Console.ReadLine());
+                        Console.Write("Подсветка клавиатуры(1 - есть, 0 - нет): ");
+                        int hasBacklight = int.Parse(Console.ReadLine());
+                        
 
-                        newDevice = new Laptop(brand, cpuBrand, ram, price);
+                        newDevice = new Laptop(brand, cpuBrand, ram, price, hasBacklight);
                     }
 
                     if (newDevice != null)
