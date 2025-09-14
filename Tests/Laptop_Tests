@@ -1,0 +1,29 @@
+using laba1;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+
+namespace laba1.Tests
+{
+    [TestClass]
+    public class LaptopTests
+    {
+        // проверка конструктора с параметрами и типа возвращаемого им значения
+        [TestMethod]
+        public void laptop_Constructor()
+        {
+            Laptop laptop = new Laptop("HONOR", "AMD", 16, 45000, 0);
+
+            Assert.IsNotNull(laptop);
+            Assert.AreEqual("Laptop", laptop.GetType().Name);
+        }
+
+
+        // проверка конструктора по умолчанию
+        [TestMethod]
+        public void Laptop_DefaultConstructor()
+        {
+            Laptop laptop = new Laptop();
+
+            Assert.IsNotNull(laptop);
+        }
+    }
+}
