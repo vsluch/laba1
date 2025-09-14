@@ -1,0 +1,29 @@
+using laba1;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+
+namespace laba1.Tests
+{
+    [TestClass]
+    public class PCTests
+    {
+        // проверка конструктора с параметрами и типа возвращаемого им значения
+        [TestMethod]
+        public void PC_Constructor()
+        {
+            PC pc = new PC("DEXP", "AMD", 8, 32000, "Белый");
+
+            Assert.IsNotNull(pc);
+            Assert.AreEqual("PC", pc.GetType().Name);
+        }
+
+
+        // проверка конструктора по умолчанию
+        [TestMethod]
+        public void PC_DefaultConstructor()
+        {
+            PC pc = new PC();
+
+            Assert.IsNotNull(pc);
+        }
+    }
+}
