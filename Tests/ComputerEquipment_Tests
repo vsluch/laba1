@@ -1,0 +1,42 @@
+using laba1;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+
+namespace laba1.Tests
+{
+    [TestClass]
+    public class ComputerEquipmentTests
+    {
+        // проверка конструктора с параметрами и типа возвращаемого им значения
+        [TestMethod]
+        public void ComputerEquipment_Constructor_CreatesObject()
+        {
+            var equipment = new ComputerEquipment("Dell", "Intel i5", 16, 50000);
+
+            Assert.IsNotNull(equipment);
+            Assert.AreEqual("ComputerEquipment", equipment.GetType().Name);
+        }
+
+
+        // проверка конструктора по умолчанию
+        [TestMethod]
+        public void ComputerEquipment_DefaultConstructor_CreatesObject()
+        {
+            var equipment = new ComputerEquipment();
+
+            Assert.IsNotNull(equipment);
+        }
+
+        // проверка правильного наследования
+        [TestMethod]
+        public void ComputerEquipment_IsBaseClassForInheritance()
+        {
+            var equipment = new ComputerEquipment();
+            var pc = new PC();
+            var laptop = new Laptop();
+
+            Assert.IsInstanceOfType(equipment, typeof(ComputerEquipment));
+            Assert.IsInstanceOfType(pc, typeof(ComputerEquipment));
+            Assert.IsInstanceOfType(laptop, typeof(ComputerEquipment));
+        }
+    }
+}
