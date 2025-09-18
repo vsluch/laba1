@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace laba1
 {
-    public class Laptop : ComputerEquipment
+    public class Laptop : ComputerEquipment, IPrintable
     {
         private bool HasBacklight { get; set; }         // наличие подсветки клавиатуры
 
@@ -42,4 +42,3 @@ namespace laba1
         }
     }  
 }
-
