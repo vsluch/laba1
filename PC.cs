@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace laba1
 {
-    public class PC : ComputerEquipment
+    public class PC : ComputerEquipment, IPrintable
     {
         private string CaseColor {  get; set; }     // цвет корпуса
 
