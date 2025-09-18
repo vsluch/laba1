@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace laba1
 {
-    public class ComputerEquipment
+    public class ComputerEquipment : IPrintable
     {
         protected string Brand {  get; set; }       // производитель
         protected string CpuBrand { get; set; }     // производитель процессора
@@ -23,7 +23,7 @@ namespace laba1
         }
 
 
-        public virtual void Print() 
+        public virtual void Print()
         {
             Console.WriteLine($"Производитель: {Brand}");
             Console.WriteLine($"Процессор: {CpuBrand}");
